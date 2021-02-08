@@ -21,12 +21,15 @@ const socials = [
 
 const detail = [
   {
+    id: 'place',
     name: 'Место:',
     value: 'Берлин, Германия'
   }, {
+    id: 'date',
     name: 'Даты:',
     value: '22 Сентября – 30 Октября 2020'
   }, {
+    id: 'prize',
     name: 'Призы:',
     value: '$1,000,000'
   }
@@ -67,8 +70,8 @@ const Banner = () => {
           <div className="banner__info">
             <div className="banner__detail">
               {
-                detail.map(({ name, value }) => (
-                  <div className="banner__row">
+                detail.map(({ id, name, value }) => (
+                  <div key={id} className="banner__row">
                     <div className="banner__name">{name}</div>
                     <div className="banner__value">{value}</div>
                   </div>
@@ -76,11 +79,10 @@ const Banner = () => {
               }
             </div>
 
-
             <div className="banner__socials">
               {
                 socials.map(({ link, icon }) => (
-                  <div className="banner-social">
+                  <div key={icon} className="banner-social">
                     <a className="banner-social__link" href={link}>
                       <Icon name={icon}/>
                     </a>
