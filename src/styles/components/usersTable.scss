@@ -1,0 +1,54 @@
+.table {
+  &-header {
+    display: flex;
+    padding: 10px 25px;
+
+    &__col {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      color: $color5;
+
+      &:first-child {
+        min-width: 32px;
+        margin-right: 36px;
+        text-align: center;
+      }
+    }
+  }
+
+  &-body {
+    &__row {
+      display: flex;
+      align-items: center;
+      padding: 15px 25px;
+
+      &:nth-child(odd) {
+        background-color: $color1;
+      }
+    }
+
+    &__number,
+    &__user {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 30px;
+      letter-spacing: 0.01em;
+      color: $color4;
+    }
+
+    &__number {
+      min-width: 32px;
+      margin-right: 36px;
+      text-align: center;
+    }
+
+    &__user {
+      .icon {
+        width: 24px;
+        height: 18px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

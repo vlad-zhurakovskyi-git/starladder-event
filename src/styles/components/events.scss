@@ -1,6 +1,7 @@
 .events {
   padding-top: 90px;
   padding-bottom: 90px;
+  background-color: $color2;
 
   &-tabs {
     border-top: 2px solid $color6;
@@ -67,5 +68,9 @@
     line-height: 30px;
     letter-spacing: 0.01em;
     color: $color4;
+  }
+
+  &__table {
+    max-width: 950px;
   }
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Card from "./Card";
+import UserTable from './UsersTable';
 
 const matches = [
   {
@@ -322,6 +323,12 @@ const Events = () => {
           </div>
           
           <div className="events__registered">Зарегестрированно: <span>24</span></div>
+        </div>
+
+        <div className="events__wrapper">
+          <div className="events__table">
+            <UserTable/>
+          </div>
         </div>
       </div>
     </div>
