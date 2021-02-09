@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Card from "./Card";
 import UserTable from './UsersTable';
+import EventInfo from "./EventInfo";
 
 const matches = [
   {
@@ -293,7 +294,7 @@ const Events = () => {
   const [activeTabId, setActiveTab] = useState(0);
 
   return (
-    <div className="events">
+    <section className="events">
       <div className="container">
         <div className="events__title">Расписание и результаты</div>
 
@@ -329,9 +330,13 @@ const Events = () => {
           <div className="events__table">
             <UserTable/>
           </div>
+
+          <div className="events__info">
+            <EventInfo/>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

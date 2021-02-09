@@ -70,7 +70,209 @@
     color: $color4;
   }
 
+  &__wrapper {
+    display: flex;
+  }
+
   &__table {
-    max-width: 950px;
+    width: 100%;
+  }
+
+  &__info {
+    min-width: 456px;
+    margin-left: 35px;
+  }
+
+  &-info {
+    &__wrapper {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        left: 28px;
+        bottom: 0;
+        width: 5px;
+        height: 100%;
+        background-color: $color1;
+        box-shadow: inset 1px 0 2px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &-step {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+
+      + .events-info-step {
+        margin-top: 40px;
+      }
+
+      &.active {
+        .events-info-step {
+          &__circle {
+            border-color: $color1;
+            color: $color1;
+            background-color: $color9;
+
+            &:after {
+              border-color: $color9;
+            }
+          }
+
+          &__title,
+          &__text {
+            color: $color4;
+          }
+
+          &__title {
+            font-weight: 700;
+          }
+        }
+      }
+
+      &__inner {
+        margin-left: 20px;
+      }
+
+      &__circle {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border: 4px solid $color7;
+        border-radius: 50%;
+        color: $color5;
+        background-color: $color1;
+
+        .icon {
+          width: 24px;
+          height: 24px;
+        }
+
+        &:after {
+          position: absolute;
+          content: '';
+          top: -4px;
+          left: -4px;
+          width: 58px;
+          height: 58px;
+          border: 1px solid rgba(117, 124, 132, 0.2);
+          border-radius: 50%;
+        }
+
+        &:before {
+          position: absolute;
+          content: '';
+          top: -4px;
+          left: -4px;
+          width: 100%;
+          height: 100%;
+          background-image: url("/assets/images/circle-shadow.svg");
+          background-size: contain;
+
+        }
+      }
+
+      &__title,
+      &__text {
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0.01em;
+        color: $color5;
+      }
+
+      &__text {
+        margin-top: 5px;
+      }
+    }
+
+    &-btn {
+      position: relative;
+      width: 100%;
+      margin-top: 40px;
+      padding: 10px 20px;
+      background-color: $color9;
+      border-radius: 2px;
+
+      &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/assets/images/btn-shadow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .icon {
+        position: absolute;
+        z-index: 2;
+        left: 20px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: $color1;
+      }
+
+      &__title,
+      &__text {
+        position: relative;
+        z-index: 2;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color1;
+      }
+
+      &__title {
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+
+      &__text {
+        letter-spacing: 0.01em;
+      }
+    }
+
+    &-nav {
+      margin-top: 30px;
+
+      &__item {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(54, 56, 65, 0.1);
+        transition: opacity 0.7s;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.5;
+        }
+
+        &:first-child {
+          border-top: 1px solid rgba(54, 56, 65, 0.1);
+        }
+
+        .icon {
+          color: $color6;
+        }
+      }
+
+      &__name {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $color5;
+      }
+    }
   }
 }
