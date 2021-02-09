@@ -1,20 +1,3 @@
-.event {
-  &__inner {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -17.5px;
-    margin-right: -17.5px;
-  }
-
-  &-card {
-    width: 25%;
-
-    &__wrapper {
-      padding: 17.5px;
-    }
-  }
-}
-
 .card {
   position: relative;
   display: inline-flex;
@@ -132,7 +115,7 @@
 
     &_modify {
       .card__team-name,
-      .card__score {
+      .card__team-score {
         color: $color5;
       }
     }

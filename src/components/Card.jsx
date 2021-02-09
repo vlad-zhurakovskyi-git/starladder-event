@@ -38,7 +38,7 @@ const RenderMatchesCard = ({ data, isFinishMatches, isFinish, isUpcoming }) => {
               }
             </div>
             <div className={`card__inner ${isFinishMatches ? 'card__inner_modify' : ''}`}>
-              <div className="card__team-score">{teams[1].name}</div>
+              <div className="card__team-name">{teams[1].name}</div>
               {isFinish ?
                 <div className="card__team-score">{teams[1].score}</div> :
                 <button type="button" className="card__outcome">{teams[1].outcome}</button>
@@ -72,7 +72,7 @@ const RenderBattlesCard = ({ data, isFinish, isUpcoming }) => {
                 <div className="card__team-name">{groups[1].name}</div>
             </div>
 
-            <button type="button" className="card__matches">{matchNumber}</button>
+            <button type="button" className="card__matches">Match {matchNumber}</button>
           </div>
         </div>
       </div>
