@@ -5,11 +5,11 @@ const table = [
   {
     number: '1',
     flag: 'ua',
-    user: 'Dianne Russell'
+    user: 'Vlad Zhurakovskyi'
   }, {
     number: '2',
     flag: 'ua',
-    user: 'Natus Vincere'
+    user: 'Dianne Russell'
   }, {
     number: '3',
     flag: 'ua',

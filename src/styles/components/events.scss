@@ -3,8 +3,23 @@
   padding-bottom: 90px;
   background-color: $color2;
 
+  @media (max-width: 1024px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   &-tabs {
+    margin-top: 40px;
     border-top: 2px solid $color6;
+
+    @media (max-width: 1024px) {
+      margin-top: 20px;
+    }
 
     &__item {
       padding: 15px 40px;
@@ -15,6 +30,11 @@
       color: $color4;
       transition: background-color 0.5s, color 0.5s;
 
+      @media (max-width: 1024px) {
+        padding: 6px 20px;
+        font-size: 16px;
+      }
+
       &:hover,
       &.active {
         background-color: $color6;
@@ -23,29 +43,69 @@
     }
   }
 
+  &__stages {
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
   &__title {
     font-size: 32px;
     font-weight: 700;
     line-height: 45px;
     color: $color4;
+
+    @media (max-width: 1024px) {
+      font-size: 26px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 22px;
+      text-align: center;
+    }
   }
 
   &__inner {
     display: flex;
     flex-wrap: wrap;
     margin: 42.5px -17.5px 72.5px -17.5px;
+
+    @media (max-width: 1024px) {
+      margin: 25px -10px 45px -10px;
+    }
+
+    @media (max-width: 1024px) {
+      margin-bottom: 20px;
+    }
   }
 
   &-card {
     width: 25%;
 
+    @media (max-width: 1250px) {
+      width: 33.3%;
+    }
+
+    @media (max-width: 1024px) {
+      width: 50%;
+    }
+
+    @media (max-width: 620px) {
+      width: 100%;
+    }
+
     &__wrapper {
       padding: 17.5px;
+
+      @media (max-width: 1024px) {
+        padding: 10px;
+      }
     }
   }
 
   &-text {
     max-width: 782px;
+    margin-top: 20px;
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 0.01em;
@@ -58,6 +118,10 @@
       &:hover {
         opacity: 0.5;
       }
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 15px;
     }
   }
 
@@ -72,15 +136,42 @@
 
   &__wrapper {
     display: flex;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      max-width: 480px;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__table {
     width: 100%;
+
+    @media (max-width: 1024px) {
+      width: 50%;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &__info {
     min-width: 456px;
     margin-left: 35px;
+
+    @media (max-width: 1024px) {
+      min-width: auto;
+      width: 50%;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-top: 30px;
+      margin-left: 0;
+    }
   }
 
   &-info {
@@ -183,6 +274,10 @@
         line-height: 25px;
         letter-spacing: 0.01em;
         color: $color5;
+
+        @media (max-width: 1024px) {
+          font-size: 14px;
+        }
       }
 
       &__text {
@@ -197,6 +292,15 @@
       padding: 10px 20px;
       background-color: $color9;
       border-radius: 2px;
+      transition: opacity 0.7s;
+
+      @media (max-width: 1024px) {
+        padding: 10px 68px;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
 
       &:after {
         position: absolute;
@@ -233,10 +337,18 @@
         font-weight: 700;
         letter-spacing: 1.5px;
         text-transform: uppercase;
+
+        @media (max-width: 1024px) {
+          font-size: 10px;
+        }
       }
 
       &__text {
         letter-spacing: 0.01em;
+
+        @media (max-width: 1024px) {
+          font-size: 10px;
+        }
       }
     }
 

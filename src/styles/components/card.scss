@@ -10,6 +10,11 @@
   border-radius: 2px;
   transition: border-color 0.5s;
 
+  @media (max-width: 620px) {
+    min-height: 225px;
+    padding: 15px;
+  }
+
   &:hover {
     border-color: $color6;
   }
@@ -24,6 +29,13 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
+
+    @media (max-width: 620px) {
+      top: -10px;
+      right: -15px;
+      width: 264px;
+      height: 144px;
+    }
   }
 
   &_live {
@@ -31,18 +43,30 @@
 
     &:after {
       background-image: url("/assets/images/card/card-live-star.svg");
+
+      @media (max-width: 620px) {
+        background-image: url("/assets/images/card/card-live-star-m.svg");
+      }
     }
   }
 
   &_finish {
     &:after {
       background-image: url("/assets/images/card/card-finish-star.svg");
+
+      @media (max-width: 620px) {
+        background-image: url("/assets/images/card/card-finish-star-m.svg");
+      }
     }
   }
 
   &_upcoming {
     &:after {
       background-image: url("/assets/images/card/card-upcoming-star.svg");
+
+      @media (max-width: 620px) {
+        background-image: url("/assets/images/card/card-upcoming-star-m.svg");
+      }
     }
   }
 
@@ -65,6 +89,13 @@
     text-transform: uppercase;
     color: $color1;
     transition: opacity 0.5s;
+
+    @media (max-width: 620px) {
+      max-width: 45px;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
 
     &:hover {
       opacity: 0.7;
@@ -128,8 +159,16 @@
   &__team-logo {
     max-width: 50px;
 
+    @media (max-width: 620px) {
+      max-width: 40px;
+    }
+
     + .card__team-logo {
       margin-left: 15px;
+
+      @media (max-width: 620px) {
+        margin-left: 12px;
+      }
     }
   }
 
@@ -146,11 +185,19 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    @media (max-width: 620px) {
+      max-width: 150px;
+    }
   }
 
   &__discipline {
     max-width: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+
+    @media (max-width: 620px) {
+      margin-bottom: 0;
+    }
   }
 
   &__outcome {
@@ -165,6 +212,13 @@
     text-transform: uppercase;
     color: $color4;
     background-color: $color2;
+
+    @media (max-width: 620px) {
+      min-width: 55px;
+      padding-left: 10px;
+      padding-right: 10px;
+      line-height: 22px;
+    }
   }
 
   &__position {
@@ -197,6 +251,10 @@
     align-items: center;
     margin-top: 10px;
 
+    @media (max-width: 620px) {
+      margin-top: 5px;
+    }
+
     .icon {
       width: 16px;
       height: 16px;
@@ -209,11 +267,18 @@
       line-height: 20px;
       letter-spacing: 0.01em;
       color: $color5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     &__partner {
       max-width: 62px;
       margin-top: 3px;
+
+      @media (max-width: 620px) {
+        margin-top: 5px;
+      }
     }
   }
 }

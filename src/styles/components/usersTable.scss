@@ -14,6 +14,12 @@
         margin-right: 36px;
         text-align: center;
       }
+
+      @media (max-width: 768px) {
+        &:first-child {
+          margin-right: 18px;
+        }
+      }
     }
   }
 
@@ -41,13 +47,25 @@
       min-width: 32px;
       margin-right: 36px;
       text-align: center;
+
+      @media (max-width: 768px) {
+        margin-right: 18px;
+      }
     }
 
     &__user {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
       .icon {
         width: 24px;
         height: 18px;
         margin-right: 10px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 16px;
       }
     }
   }
